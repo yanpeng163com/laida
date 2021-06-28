@@ -9,9 +9,28 @@ import store from './store'
 import Echarts from "vue-echarts";
 import * as echarts from 'echarts'
 
+
+import Highcharts from 'highcharts'
+import HighchartsVue from 'highcharts-vue'
+import exportingInit from 'highcharts/modules/exporting'
+import sankey from 'highcharts/modules/sankey'
+import oldie from 'highcharts/modules/oldie'
+import organization from 'highcharts/modules/organization'
+
+
+exportingInit(Highcharts)
+sankey(Highcharts)
+oldie(Highcharts)
+organization(organization)
+
+Vue.use(HighchartsVue)
+
+
+
 Vue.config.productionTip = false
 Vue.prototype.$echarts = echarts;
 Vue.component("v-echart", Echarts);
+
 
 Vue.use(ElementUI);
 /* eslint-disable no-new */

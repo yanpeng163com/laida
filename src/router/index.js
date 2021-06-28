@@ -60,5 +60,10 @@ export default new Router({
             component: () =>
                 import ('@/views/echarts'),
         },
+        {
+            path: '/highcharts',
+            component: () =>
+                import ('@/views/highcharts'),
+        },
     ]
 })
