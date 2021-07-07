@@ -24,6 +24,9 @@ npm install highcharts-vue
 #vue-pdf
 npm install --save vue-pdf
 
+#水桶图
+npm install echarts-liquidfill
+
 
 
 

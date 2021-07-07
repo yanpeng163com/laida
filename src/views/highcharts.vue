@@ -203,7 +203,7 @@
       }
     },
     mounted() {
-        this.init();
+        // this.init();
     },
   }
 

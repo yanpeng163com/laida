@@ -65,5 +65,16 @@ export default new Router({
             component: () =>
                 import ('@/views/highcharts'),
         },
+        {
+            path: '/liquidfill',
+            component: () =>
+                import ('@/views/liquidfill'),
+        },
+        {
+            path: '/animate',
+            component: () =>
+                import ('@/views/animate'),
+        },
+        //animate
     ]
 })
