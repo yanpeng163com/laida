@@ -27,6 +27,12 @@ npm install --save vue-pdf
 #水桶图
 npm install echarts-liquidfill
 
+#图谱
+npm install --save relation-graph
+
+#Fabric.js
+npm install fabric
+
 
 
 

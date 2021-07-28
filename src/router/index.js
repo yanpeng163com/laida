@@ -75,6 +75,21 @@ export default new Router({
             component: () =>
                 import ('@/views/animate'),
         },
+        {
+            path: '/graph',
+            component: () =>
+                import ('@/views/graph'),
+        },
+        {
+            path: '/graph2',
+            component: () =>
+                import ('@/views/graph2'),
+        },
+        {
+            path: '/graph3',
+            component: () =>
+                import ('@/views/graph3'),
+        },
         //animate
     ]
 })
