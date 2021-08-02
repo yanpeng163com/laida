@@ -90,6 +90,11 @@ export default new Router({
             component: () =>
                 import ('@/views/graph3'),
         },
+        {
+            path: '/contextMenu',
+            component: () =>
+                import ('@/views/contextMenu'),
+        },
         //animate
     ]
 })

@@ -19,6 +19,9 @@ import oldie from 'highcharts/modules/oldie'
 // import organization from 'highcharts/modules/organization'
 
 
+import VueContextMenu from 'vue-contextmenu'
+Vue.use(VueContextMenu)
+
 // exportingInit(Highcharts)
 sankey(Highcharts)
 oldie(Highcharts)
