@@ -18,6 +18,8 @@ import sankey from 'highcharts/modules/sankey'
 import oldie from 'highcharts/modules/oldie'
 // import organization from 'highcharts/modules/organization'
 
+import axios from 'axios'
+Vue.prototype.axios = axios
 
 import VueContextMenu from 'vue-contextmenu'
 Vue.use(VueContextMenu)

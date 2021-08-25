@@ -1,6 +1,6 @@
 <template>
   <el-menu unique-opened default-active="2" class="el-menu-vertical-demo" background-color="#18CFB3"
-    text-color="#fff" active-text-color="#18CFB3" :collapse="isCollapse" >
+    text-color="#fff" active-text-color="#18CFB3" :collapse="isCollapse" router>
     <template v-for="one in items">
       <template v-if="one.subs">
         <el-submenu :index="one.index" :key="one.index">
@@ -56,11 +56,11 @@
             index: "2",
             name: "我的申请",
             subs: [{
-                index: "/personal/shareyes",
+                index: "/graph",
                 name: "申请的API"
               },
               {
-                index: "/personal/applicationdata",
+                index: "/global-view-web/index/graph3",
                 name: "申请的数据"
               }
             ]
