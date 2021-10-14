@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
 
+const newLocal = '/graph'
 export default new Router({
     mode: 'history',
     routes: [{
@@ -78,7 +79,7 @@ export default new Router({
                 import ('@/views/animate'),
         },
         {
-            path: '/graph',
+            path: newLocal,
             component: () =>
                 import ('@/views/graph'),
         },
@@ -93,6 +94,11 @@ export default new Router({
                 import ('@/views/graph3'),
         },
         {
+            path: '/graph4',
+            component: () =>
+                import ('@/views/graph4'),
+        },
+        {
             path: '/contextMenu',
             component: () =>
                 import ('@/views/contextMenu'),
@@ -101,6 +107,16 @@ export default new Router({
             path: '/fenping',
             component: () =>
                 import ('@/views/fenping'),
+        },
+        {
+            path: '/scroll',
+            component: () =>
+                import ('@/views/scroll'),
+        },
+        {
+            path: '/input',
+            component: () =>
+                import ('@/views/input'),
         },
         //animate
     ]

@@ -30,8 +30,15 @@ npm install echarts-liquidfill
 #图谱
 npm install --save relation-graph
 
+#mock
+npm install mockjs
+
 #Fabric.js
 npm install fabric
+
+#上下左右滚动 插件
+npm install vue-seamless-scroll --save
+#https://madewith.cn/74
 
 
 

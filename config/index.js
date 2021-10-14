@@ -32,11 +32,12 @@ module.exports = {
         // set this to false - it *may* help
         // https://vue-loader.vuejs.org/en/options.html#cachebusting
         cacheBusting: true,
-
+        // before: require('../mock/mock-server.js'),
+        before: require('../mock/mock-server.js'),
         cssSourceMap: true,
         proxyTable: {
             "/peng": {
-                target: `http://161.189.173.220:5000/api/`,
+                target: `https://www.fastmock.site/mock/161ebe54575d38f52c68f800705e8e25/_shift/getMenu`,
                 ws: false,
                 changeOrigin: true,
                 pathRewrite: {

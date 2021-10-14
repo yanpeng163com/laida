@@ -37,6 +37,11 @@ export default {
             'label': '中心',
             'layoutName': 'center',
             'layoutClassName': 'seeks-layout-center'
+          },
+          {
+            'label': '自动布局',
+            'layoutName': 'force',
+            'layoutClassName': 'seeks-layout-force'
           }
         ],
         defaultJunctionPoint: 'border'
@@ -46,6 +51,7 @@ export default {
   },
   mounted() {
     this.showSeeksGraph()
+    
   },
   methods: {
     showSeeksGraph(query) {
@@ -88,6 +94,8 @@ export default {
       this.$refs.seeksRelationGraph.setJsonData(__graph_json_data, (seeksRGGraph) => {
         // 这些写上当图谱初始化完成后需要执行的代码
       })
+
+      console.log(this.$refs.seeksRelationGraph)
     },
     loadNextLevel2Data() {
       this.level2DataIsloaded = true

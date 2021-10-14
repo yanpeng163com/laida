@@ -21,6 +21,9 @@ import oldie from 'highcharts/modules/oldie'
 import axios from 'axios'
 Vue.prototype.axios = axios
 
+import Directives from "./plugins/directives.js";
+Vue.use(Directives)
+
 import VueContextMenu from 'vue-contextmenu'
 Vue.use(VueContextMenu)
 
