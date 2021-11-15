@@ -94,7 +94,7 @@
 
 </style>
 <style >
-    .my-autocomplete {
+    /* .my-autocomplete {
         li {
             line-height: normal;
             padding: 7px;
@@ -112,5 +112,5 @@
             color: #ddd;
             }
         }
-        }
+        } */
 </style>

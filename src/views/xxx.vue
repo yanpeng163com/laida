@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-button>默认按钮</el-button>
-    <div style='width:500px;background:red'>
+    <!-- <div style='width:500px;background:red'>
       <el-table :data="tableData" style="width: 100%"  :row-class-name="tableRowClassName" :header-cell-style="{background:'transparent',color:'#3cf'}" :show-header="false">
         <el-table-column prop="date" label="日期" width="180" :render-header='renderHeader'>
         </el-table-column>
@@ -10,8 +10,16 @@
         <el-table-column prop="address" label="地址">
         </el-table-column>
       </el-table>
-    </div>
-
+    </div> -->
+    <el-select
+      v-model="value1">
+      <el-option
+        v-for="item in list"
+        :key="item.id"
+        :label="item.type"
+        :value="item.type">
+      </el-option>
+    </el-select>
   </div>
 
 </template>
@@ -35,7 +43,21 @@
           date: '2016-05-03',
           name: '王小虎',
           address: '上海市普陀区金沙江路 1518 弄'
-        }]
+        }],
+        value1:'1',
+        list:[
+          {
+            type:'123',
+            id:1
+          },
+          {
+            type:'av',
+            id:2
+          },{
+            type:'ag',
+            id:3
+          }
+        ]
 
       }
     },

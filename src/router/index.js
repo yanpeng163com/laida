@@ -118,6 +118,11 @@ export default new Router({
             component: () =>
                 import ('@/views/input'),
         },
+        {
+            path: '/tableHang',
+            component: () =>
+                import ('@/views/tableHang'),
+        },
         //animate
     ]
 })

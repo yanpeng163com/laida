@@ -27,6 +27,10 @@ Vue.use(Directives)
 import VueContextMenu from 'vue-contextmenu'
 Vue.use(VueContextMenu)
 
+import onlyNumber from './directive/el-input' // 添加此行=>自定义全局指令
+
+Vue.use(onlyNumber) // 添加此行=>使用该全局指令
+
 // exportingInit(Highcharts)
 sankey(Highcharts)
 oldie(Highcharts)

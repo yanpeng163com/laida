@@ -10,6 +10,7 @@
           <span class="addr">{{ item.address }}</span>
         </template>
       </el-autocomplete>
+      <el-input v-model="value1" v-only-number="{max:100,min:0,precision:0}" :min="1" :max="100" type="number" on-keypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"></el-input>
     </div>
     <div style=' width: 0;
     height: 0;
@@ -24,6 +25,7 @@
       return {
         restaurants: [],
         state: '',
+        value1:''
       }
     },
     methods: {
