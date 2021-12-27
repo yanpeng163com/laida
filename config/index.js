@@ -44,6 +44,15 @@ module.exports = {
                     '^/peng': ''
                 }
             },
+            '/api': {　　　　
+                target: 'http://161.189.173.220:44316/api/',
+                // target: 'http://10.168.1.19:44316/api/',
+                ws: false,
+                changOrigin: true, //允许跨域
+                pathRewrite: {　　　　　　　　　　　　
+                    '^/api': ''
+                }　　　　　　
+            },
         }
     },
 

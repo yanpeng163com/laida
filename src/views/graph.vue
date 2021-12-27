@@ -96,7 +96,8 @@
           ],
 
           // 这里可以参考"Graph 图谱"中的参数进行设置
-        }
+        },
+        relationData:''
       }
     },
     computed: {
@@ -111,6 +112,9 @@
       layout() {
         //.GraphSettingPanel()
         console.log(this.$refs.seeksRelationGraph.refresh())
+        console.log(this.relationData)
+        // this.$refs.seeksRelationGraph.setJsonData(this.relationData, (seeksRGGraph) => {})
+
 		//   this.$refs.seeksRelationGraph.focusNodeById('2_e91dfc1a04ba4f3fafbf468311d6df6f')
 		  // this.$refs.seeksRelationGraph.focusRootNode()
       },
@@ -248,7 +252,7 @@
 
         // __graph_json_data.links.push(data.data.node)
         console.log(__graph_json_data)
-
+        this.relationData=__graph_json_data
         this.$refs.seeksRelationGraph.setJsonData(__graph_json_data, (seeksRGGraph) => {
           // Called when the relation-graph is completed 
           this.$refs.seeksRelationGraph.zoom(-50)

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <div style="height:50px;padding-top:6px;padding-left: 30px;padding-right:30px;border-bottom: #efefef solid 1px;">
       <el-button :disabled="level2DataIsloaded" type="success" @click="loadNextLevel2Data">加载第2层数据</el-button>
       <el-button  type="success" @click="loadNextLevel3Data">加载第3层数据</el-button>
@@ -27,31 +27,33 @@ export default {
       level3DataIsloaded: false,
       isShowCodePanel: false,
       graphOptions: {
+        backgrounImage:require('@/assets/bg_2.jpg'),
         defaultNodeBorderWidth: 0,
-        defaultNodeColor: 'rgba(238, 178, 94, 1)',
-        allowSwitchLineShape: true,
-        allowSwitchJunctionPoint: true,
-        defaultLineShape: 1,
-        'layouts': [
-          {
-            'label': '中心',
-            'layoutName': 'center',
-            'layoutClassName': 'seeks-layout-center'
-          },
-          {
-            'label': '自动布局',
-            'layoutName': 'force',
-            'layoutClassName': 'seeks-layout-force'
-          }
-        ],
-        defaultJunctionPoint: 'border'
+          allowShowMiniToolBar: true,
+          allowSwitchLineShape: false,
+          allowSwitchJunctionPoint: false,
+          isMoveByParentNode: true,
+          defaultLineShape: 1.5,
+          'layouts': [{
+              'label': '中心',
+              'layoutName': 'center',
+              'layoutClassName': 'seeks-layout-center',
+              useLayoutStyleOptions: true,
+              'defaultNodeWidth': '50',
+              'defaultNodeHeight': '50',
+              defaultNodeBorderWidth: 0,
+              defaultLineShape: 1,
+              distance_coefficient: 1
+            },
+          ],
+          defaultJunctionPoint: 'lr'
         // 这里可以参考"Graph 图谱"中的参数进行设置
       }
     }
   },
   mounted() {
     this.showSeeksGraph()
-    
+    this.loadNextLevel2Data()
   },
   methods: {
     showSeeksGraph(query) {
@@ -80,7 +82,28 @@ export default {
           { id: '85', name: '节点-85', myicon: 'el-icon-sunny' },
           { id: '91', name: '节点-91', myicon: 'el-icon-sunny' },
           { id: '92', name: '节点-82', myicon: 'el-icon-sunny' },
-          { id: '5', name: '节点-5', myicon: 'el-icon-sunny' }
+          { id: '5', name: '节点-5', myicon: 'el-icon-sunny' },
+          { id : '101', name:'节点-101', myicon: 'el-icon-sunny'},
+          { id : '102', name:'节点-102', myicon: 'el-icon-sunny'},
+          { id : '103', name:'节点-103', myicon: 'el-icon-sunny'},
+          { id : '104', name:'节点-104', myicon: 'el-icon-sunny'},
+          { id : '105', name:'节点-105', myicon: 'el-icon-sunny'},
+          { id : '106', name:'节点-106', myicon: 'el-icon-sunny'},
+          { id : '107', name:'节点-107', myicon: 'el-icon-sunny'},
+          { id : '108', name:'节点-108', myicon: 'el-icon-sunny'},
+          { id : '109', name:'节点-109', myicon: 'el-icon-sunny'},
+          { id : '110', name:'节点-110', myicon: 'el-icon-sunny'},
+          { id : '111', name:'节点-111', myicon: 'el-icon-sunny'},
+          { id : '112', name:'节点-112', myicon: 'el-icon-sunny'},
+          { id : '113', name:'节点-113', myicon: 'el-icon-sunny'},
+          { id : '114', name:'节点-114', myicon: 'el-icon-sunny'},
+          { id : '115', name:'节点-115', myicon: 'el-icon-sunny'},
+          { id : '116', name:'节点-116', myicon: 'el-icon-sunny'},
+          { id : '117', name:'节点-117', myicon: 'el-icon-sunny'},
+          { id : '118', name:'节点-118', myicon: 'el-icon-sunny'},
+          { id : '119', name:'节点-119', myicon: 'el-icon-sunny'},
+          { id : '120', name:'节点-120', myicon: 'el-icon-sunny'},
+
         ],
         links: [
           { from: '1', to: '2', text: '投资' },
@@ -113,6 +136,26 @@ export default {
           { from: '8', to: '83', text: '投资' },
           { from: '8', to: '84', text: '投资' },
           { from: '8', to: '85', text: '投资' },
+          { from: '8', to: '101', text: '投资' },
+          { from: '8', to: '102', text: '投资' },
+          { from: '8', to: '103', text: '投资' },
+          { from: '8', to: '104', text: '投资' },
+          { from: '8', to: '105', text: '投资' },
+          { from: '8', to: '106', text: '投资' },
+          { from: '8', to: '107', text: '投资' },
+          { from: '8', to: '108', text: '投资' },
+          { from: '8', to: '109', text: '投资' },
+          { from: '8', to: '110', text: '投资' },
+          { from: '8', to: '111', text: '投资' },
+          { from: '8', to: '112', text: '投资' },
+          { from: '8', to: '113', text: '投资' },
+          { from: '8', to: '114', text: '投资' },
+          { from: '8', to: '115', text: '投资' },
+          { from: '8', to: '116', text: '投资' },
+          { from: '8', to: '117', text: '投资' },
+          { from: '8', to: '118', text: '投资' },
+          { from: '8', to: '119', text: '投资' },
+          { from: '8', to: '120', text: '投资' },
           { from: '9', to: '91', text: '投资' },
           { from: '9', to: '92', text: '投资' },
           { from: '3', to: '1', text: '高管' },

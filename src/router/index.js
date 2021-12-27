@@ -44,6 +44,16 @@ export default new Router({
                 import ('@/views/table'),
         },
         {
+            path: '/table3',
+            component: () =>
+                import ('@/views/table3'),
+        },
+        {
+            path: '/table1',
+            component: () =>
+                import ('@/views/table1'),
+        },
+        {
             path: '/dialog',
             component: () =>
                 import ('@/components/dialog'),
@@ -122,6 +132,11 @@ export default new Router({
             path: '/tableHang',
             component: () =>
                 import ('@/views/tableHang'),
+        },
+        {
+            path: '/allCheck',
+            component: () =>
+                import ('@/views/allCheck'),
         },
         //animate
     ]
